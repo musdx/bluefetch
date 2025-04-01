@@ -17,7 +17,7 @@ fn main() {
                             .split(":")
                             .nth(1)
                             .map(|s| s.trim())
-                            .unwrap_or("KMS")
+                            .unwrap_or("error")
                             .to_string();
                     }
                     if line.trim().starts_with("Operating") {
@@ -25,7 +25,7 @@ fn main() {
                             .split(':')
                             .nth(1)
                             .map(|s| s.trim())
-                            .unwrap_or("FUCK ME")
+                            .unwrap_or("error")
                             .to_string();
                     }
                     if line.trim().starts_with("Kernel") {
@@ -47,7 +47,7 @@ fn main() {
                 }
             }
             Err(e) => {
-                println!("here the error bozzo: \n {e}")
+                println!("Warning: \n {e}")
             }
         },
         Err(e) => {
@@ -57,5 +57,5 @@ fn main() {
     println!("Os: {}", distro);
     println!("Host: {}", host);
     println!("Kernel: {}", kernel);
-    println!("Mobo: {}", mobo);
+    println!("Device: {}", mobo);
 }

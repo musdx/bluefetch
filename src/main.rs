@@ -1,5 +1,5 @@
+use std::env;
 use std::fs;
-use std::io::ErrorKind;
 use std::process::Command;
 
 fn main() {
@@ -8,6 +8,8 @@ fn main() {
     let mut kernel = String::new();
     let mut mobo = String::new();
     let mut cpu = String::new();
+
+    let username = env::var("USER").unwrap_or("N/A".to_string());
 
     match Command::new("hostnamectl").output() {
         Ok(output) => match String::from_utf8(output.stdout) {

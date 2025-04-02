@@ -2,6 +2,7 @@ use modules::user;
 
 mod modules {
     pub mod cpu;
+    pub mod mem;
     pub mod sysgen;
     pub mod user;
 }

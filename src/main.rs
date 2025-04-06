@@ -10,6 +10,7 @@ mod modules {
 fn main() {
     let system_general_info = modules::sysgen::sys_check();
     let memory = modules::mem::memory();
+
     println!("Os: {}", system_general_info.distro);
     println!("Host: {}@{}", user::user_name(), system_general_info.host);
     println!("Kernel: {}", system_general_info.kernel);

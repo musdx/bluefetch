@@ -22,4 +22,5 @@ fn main() {
     );
     println!("Device: {}", system_general_info.mobo);
     println!("CPU: {}", modules::cpu::cpuinfo());
+    println!("Test")
 }
